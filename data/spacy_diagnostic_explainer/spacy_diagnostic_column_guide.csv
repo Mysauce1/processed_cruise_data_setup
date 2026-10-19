@@ -1,0 +1,22 @@
+﻿column,explanation
+sentence_id,Identifier for the example sentence (S1 or S2).
+sentence,The full sentence being analyzed.
+token_index,Zero-based position of this token in spaCy's token sequence.
+token,The token text (usually a word or punctuation mark).
+dep,spaCy dependency label: the grammatical relationship assigned to this token.
+head,The token spaCy treats as this token's syntactic head.
+pos,"spaCy part-of-speech label, such as NOUN, VERB, or CCONJ."
+char_offset,Zero-based character offset where this token starts in the sentence.
+is_target_coordinator,"True if the lowercase token is and, but, or yet."
+dep_is_cc,True if spaCy labels this token as a coordinating conjunction (cc).
+head_dep,Dependency label assigned to the token's head.
+head_dep_is_conj,True if the head's dependency label is conj.
+head_subtree,"Text of the head's subtree, useful for seeing what the parser groups together."
+subject_tokens_in_head_subtree,Tokens in the head's subtree with a subject-related dependency label used by the project code.
+has_subject_in_head_subtree,True if at least one such subject-related token is present.
+skipped_by_coordinator_check,True if token is not and/but/yet OR spaCy did not label it cc.
+skipped_by_head_check,True if the previous check passed but the head's dependency is not conj.
+skipped_by_subject_check,True if earlier checks passed but no subject-related token was found in the head subtree.
+skipped_by_contrast_check,True if earlier checks passed and token is but or yet; these are handled by the separate contrast rule.
+would_append_boundary,True if the token passes all checks and the code would append its character offset as a split boundary.
+interpretation,Plain-English guide to reading this token's diagnostic row; it is not a human-verified grammar annotation.

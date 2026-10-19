@@ -1,0 +1,4 @@
+pandas>=2.0,<3.0
+spacy>=3.7,<4.0
+ftfy>=6.1,<7.0
+vaderSentiment>=3.3,<4.0
